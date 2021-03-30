@@ -11,7 +11,7 @@ app.get("/calculate", (req, res) => {
         totalCredit = totalCredit + grade.credit
         totalScore = totalScore + (grade.credit*grade.score)
     });
-    const gpa = totalScore / totalCredit - 0.5
+    const gpa = totalScore / totalCredit
     console.log(gpa);
     res.send("Your GPA: " + gpa)
 })
